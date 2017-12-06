@@ -473,4 +473,4 @@
     </div>
 </section><!--b-featured-->
 
-<?php get_footer(); ?>
+<?php get_footer();
