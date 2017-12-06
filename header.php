@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Connecta - Kontakt</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	<!--[if lt IE 9]>
 	<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -67,33 +66,9 @@
 				</div>
 			</div>
 			<div class="col-sm-9 col-xs-8">
-				<div class="b-nav__list wow slideInRight" data-wow-delay="0.3s">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<div class="collapse navbar-collapse navbar-main-slide" id="nav">
-						<ul class="navbar-nav-menu">
-							<li><a href="home.html">Početna</a></li>
-							<li><a href="about.html">O nama</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle='dropdown' href="">Usluge <span class="fa fa-caret-down"></span></a>
-								<ul class="dropdown-menu h-nav">
-									<li><a href="fleet-management.html">Fleet management</a></li>
-									<li><a href="">Prodaja vozila</a></li>
-									<li><a href="">Najam vozila</a></li>
-									<li><a href="">Servis</a></li>
-								</ul>
-							</li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contacts.html">Kontakt</a></li>
-						</ul>
-					</div>
-				</div>
+				<?php if(has_nav_menu('header-menu')): ?>
+				<?php get_template_part('main-menu', 'header-menu'); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
