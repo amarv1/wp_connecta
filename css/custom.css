@@ -1,0 +1,45 @@
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+/* CUSTOM CSS (ADD YOUR CSS HERE!) */
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+.slider-overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.google-map {
+    position: relative;
+    padding-bottom: 400px; // This is the aspect ratio
+height: 0;
+    overflow: hidden;
+}
+.google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 400px !important;
+}
+
+/* Partners */
+.b-partners{
+    padding: 80px 0 120px 0;
+    text-align: center;
+}
+
+.b-partners h1.s-title{
+    margin-bottom: 20px;
+}
+
+.mb-150 {
+    margin-bottom: 150px;
+}
