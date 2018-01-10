@@ -40,9 +40,9 @@ get_header(); ?>
 							<div class="col-sm-6 col-xs-12">
 								<div class="b-best__info">
 									<header class="b-best__info-head">
-										<h2 class="wow zoomInRight" data-wow-delay="0.5s" style="border:none;">1. Opis fleet managementa</h2>
+										<h2 class="wow zoomInRight" data-wow-delay="0.5s" style="border:none;"><?php the_sub_field('title') ?></h2>
 									</header>
-									<p class="wow zoomInRight" data-wow-delay="0.5s">Curabitur libero. Donec facilisis velit eu est. Phasellus cons quat. Aenean vitae quam mus etern nunc. Nunc conseq sem velde metus imperdiet lacinia. Aenean vulputate. Donec vene natis leo curabitur at neque ut sapien fusce cursus dapibus ligula Lorem ipsum dolor sitter amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Uit enim ad minim veniami quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod consequat. Duis aute irure dolor in reprehenderit.</p>
+									<p class="wow zoomInRight" data-wow-delay="0.5s"><?php the_sub_field('text') ?></p>
 								</div>
 							</div>
 						</div>
@@ -93,23 +93,6 @@ get_header(); ?>
 					</div>
 				</div>
 			</section><!--b-more-->
-		<?php endif; ?>
-
-		<?php if (get_row_layout() == 'partners'): ?>
-			<section class="b-partners">
-				<div class="container">
-					<h1 class="s-title wow zoomInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomInUp;"><?php the_sub_field('title') ?></h1>
-					<div class="">
-						<?php if(have_rows('partners')): ?>
-							<?php while(have_rows('partners')): the_row() ?>
-								<div class="b-brands__brand wow zoomInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomInUp;">
-									<img src="<?php the_sub_field('partner_logo') ?>" width="150" alt="brand">
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</div>
-				</div>
-			</section>
 		<?php endif; ?>
 
 	<?php endwhile; ?>
