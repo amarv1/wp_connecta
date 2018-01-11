@@ -4,18 +4,18 @@
 */
 get_header(); ?>
 
-<section class="b-pageHeader">
+<section class="b-pageHeader" style="background: url(<?php the_field('background') ?>) center;">
 	<div class="container">
-		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s">Prodaja vozila</h1>
+		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s"><?php the_field('title') ?></h1>
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
-			<h3>Informacije i savjeti</h3>
+			<h3><?php the_field('pretitle') ?></h3>
 		</div>
 	</div>
 </section><!--b-pageHeader-->
 
 <div class="b-breadCumbs s-shadow wow zoomInUp" data-wow-delay="0.5s">
 	<div class="container">
-		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active">Blog</a>
+		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active">Shop</a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -74,166 +74,15 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-9 col-sm-8 col-xs-12">
 				<div class="b-items__cars">
-					<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-						<div class="b-items__cars-one-img">
-							<img src="media/270x230/dodge.jpg" alt='dodge'/>
-							<a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-							<span class="b-items__cars-one-img-type m-premium">Akcija</span>
-							<form action="/" method="post">
-								<input type="checkbox" name="check1" id='check1'/>
-								<label for="check1" class="b-items__cars-one-img-check"><span class="fa fa-check"></span></label>
-							</form>
-						</div>
-						<div class="b-items__cars-one-info">
-							<header class="b-items__cars-one-info-header s-lineDownLeft">
-								<h2>Chevrolet Silverado 1500</h2>
-								<span>50 000KM</span>
-							</header>
-							<p>
-								In a pickup market gone fancy, the Silverado sticks to its basic-truck recipe. The steering is accurate, and the Silverado handles more like a big car than a big truck. 
-							</p>
-							<div class="b-items__cars-one-info-km">
-								<span class="fa fa-tachometer"></span> 31,730 KM
-							</div>
-							<div class="b-items__cars-one-info-details">
-								<div class="b-featured__item-links">
-									<a href="#">Registrovano 2017</a>
-									<a href="#">Polovno</a>
-									<a href="#">Automatic</a>
-									<a href="#">Dizel</a>
-								</div>
-								<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
-							</div>
-						</div>
-					</div>
-					<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-						<div class="b-items__cars-one-img">
-							<img src="media/270x230/mersAmg.jpg" alt='jaguar'/>
-							<a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-							<span class="b-items__cars-one-img-type m-listing">Povoljno</span>
-							<form action="/" method="post">
-								<input type="checkbox" name="check3" id='check3'/>
-								<label for="check3" class="b-items__cars-one-img-check"><span class="fa fa-check"></span></label>
-							</form>
-						</div>
-						<div class="b-items__cars-one-info">
-							<header class="b-items__cars-one-info-header s-lineDownLeft">
-								<h2>Jaguar XF 2017</h2>
-								<span>80 000KM</span>
-							</header>
-							<p>
-								With curvy lines, gorgeous wood, and leather interiors—and performance—the XF combines all there is to love about Jaguars. The 240-hp, 2.0-liter turbocharged
-							</p>
-							<div class="b-items__cars-one-info-km">
-								<span class="fa fa-tachometer"></span> 0,000 KM
-							</div>
-							<div class="b-items__cars-one-info-details">
-								<div class="b-featured__item-links">
-									<a href="#">Registrovano 2017</a>
-									<a href="#">Polovno</a>
-									<a href="#">Automatic</a>
-									<a href="#">Dizel</a>
-								</div>
-								<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
-							</div>
-						</div>
-					</div>
-					<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-						<div class="b-items__cars-one-img">
-							<img src="media/270x230/mersAmg.jpg" alt='jaguar'/>
-							<a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-							<span class="b-items__cars-one-img-type m-listing">Povoljno</span>
-							<form action="/" method="post">
-								<input type="checkbox" name="check3" id='check3'/>
-								<label for="check3" class="b-items__cars-one-img-check"><span class="fa fa-check"></span></label>
-							</form>
-						</div>
-						<div class="b-items__cars-one-info">
-							<header class="b-items__cars-one-info-header s-lineDownLeft">
-								<h2>Jaguar XF 2017</h2>
-								<span>80 000KM</span>
-							</header>
-							<p>
-								With curvy lines, gorgeous wood, and leather interiors—and performance—the XF combines all there is to love about Jaguars. The 240-hp, 2.0-liter turbocharged
-							</p>
-							<div class="b-items__cars-one-info-km">
-								<span class="fa fa-tachometer"></span> 0,000 KM
-							</div>
-							<div class="b-items__cars-one-info-details">
-								<div class="b-featured__item-links">
-									<a href="#">Registrovano 2017</a>
-									<a href="#">Polovno</a>
-									<a href="#">Automatic</a>
-									<a href="#">Dizel</a>
-								</div>
-								<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
-							</div>
-						</div>
-					</div>
-					<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-						<div class="b-items__cars-one-img">
-							<img src="media/270x230/nissanList.jpg" alt="nissan" />
-							<a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-							<form action="/" method="post">
-								<input type="checkbox" name="check5" id='check5'/>
-								<label for="check5" class="b-items__cars-one-img-check"><span class="fa fa-check"></span></label>
-							</form>
-						</div>
-						<div class="b-items__cars-one-info">
-							<header class="b-items__cars-one-info-header s-lineDownLeft">
-								<h2>2016 Nissan Maxima</h2>
-								<span>40 000KM</span>
-							</header>
-							<p>
-								Once billed as the "four-door sports car," the Maxima has grown bigger and heavier over the decades, detracting from its appeal. The current generation
-							</p>
-							<div class="b-items__cars-one-info-km">
-								<span class="fa fa-tachometer"></span> 35,000 KM
-							</div>
-							<div class="b-items__cars-one-info-details">
-								<div class="b-featured__item-links">
-									<a href="#">Registrovano 2017</a>
-									<a href="#">Polovno</a>
-									<a href="#">Manual</a>
-									<a href="#">Dizel</a>
-								</div>
-								<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
-							</div>
-						</div>
-					</div>
-					<div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-						<div class="b-items__cars-one-img">
-							<img src="media/270x230/mersAmg.jpg" alt="amg" />
-							<a data-toggle="modal" data-target="#myModal" href="#" class="b-items__cars-one-img-video"><span class="fa fa-film"></span>VIDEO</a>
-							<form action="/" method="post">
-								<input type="checkbox" name="check6" id='check6'/>
-								<label for="check6" class="b-items__cars-one-img-check"><span class="fa fa-check"></span></label>
-							</form>
-						</div>
-						<div class="b-items__cars-one-info">
-							<header class="b-items__cars-one-info-header s-lineDownLeft">
-								<h2>Mercedes-Benz GL63 AMG</h2>
-								<span>120 000KM</span>
-							</header>
-							<p>
-								The top-flight GL63 AMG is built for those who crave performance, luxury, and exclusivity 
-								— you know; the                     finer things in life. AMG works its magic on the GL
-							</p>
-							<div class="b-items__cars-one-info-km">
-								<span class="fa fa-tachometer"></span> 35,000 KM
-							</div>
-							<div class="b-items__cars-one-info-details">
-								<div class="b-featured__item-links">
-									<a href="#">Registrovano 2017</a>
-									<a href="#">Polovno</a>
-									<a href="#">Manual</a>
-									<a href="#">Dizel</a>
-								</div>
-								<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
-							</div>
-						</div>
-					</div>
-					
+					<?php 
+						$query = new WP_Query( array( 'post_type' => 'cars' ) );
+						if($query->have_posts()) {
+							while($query->have_posts()) {
+								$query->the_post();
+								get_template_part('template-parts/car-single', 'page');
+							}
+						}
+					?>
 				</div>
 				<div class="b-items__pagination wow zoomInUp" data-wow-delay="0.5s">
 					<div class="b-items__pagination-main">

@@ -8,14 +8,14 @@ get_header(); ?>
 	<div class="container">
 		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s">Blog</h1>
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
-			<h3>Prodaja vozila</h3>
+			<h3>Blog</h3>
 		</div>
 	</div>
 </section><!--b-pageHeader-->
 
 <div class="b-breadCumbs s-shadow wow zoomInUp" data-wow-delay="0.5s">
 	<div class="container">
-		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active">Prodaja vozila</a>
+		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active">Blog</a>
 	</div>
 </div><!--b-breadCumbs-->
 

@@ -21,10 +21,10 @@ get_header(); ?>
 	</div>
 </div><!--b-breadCumbs-->
 
-<?php if( have_rows('content') ): ?>
-	<?php while( have_rows('content') ) : the_row();  ?>
+<?php if(have_rows('content')): ?>
+	<?php while(have_rows('content')) : the_row();  ?>
 		
-		<?php if (get_row_layout() == 'text-image'): ?>
+		<?php if(get_row_layout() == 'text-image'): ?>
 			<section class="b-best">
 				<div class="container">
 					<?php if(get_sub_field('pretitle')): ?>
