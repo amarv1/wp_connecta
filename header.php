@@ -60,9 +60,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 col-xs-4">
-				<div class="b-nav__logo wow slideInLeft" data-wow-delay="0.3s">
-					<h3><a href="home.html">C<span>onnecta</span></a></h3>
-					<h2><a href="home.html">Slogan</a></h2>
+				<div class="wow slideInLeft" data-wow-delay="0.3s" style="padding: 8px 0 0 5px">
+					<!-- <h3><a href="home.html">C<span>onnecta</span></a></h3>
+					<h2><a href="home.html">Slogan</a></h2> -->
+					<img src="http://localhost/connecta/wp-content/uploads/LOGO_CONNECTA.png" height="25"/>
 				</div>
 			</div>
 			<div class="col-sm-9 col-xs-8">

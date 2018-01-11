@@ -125,8 +125,9 @@
 		<div class="row">
 			<div class="col-xs-4">
 				<div class="b-footer__company wow fadeInLeft" data-wow-delay="0.3s">
-					<div class="b-nav__logo">
-						<h3><a href="home.html"><span>Connecta</span></a></h3>
+					<div class="" style="padding: 8px 0 0 5px;margin-bottom:5px">
+						<!-- <h3><a href="home.html"><span>Connecta</span></a></h3> -->
+						<img src="http://localhost/connecta/wp-content/uploads/LOGO_CONNECTA.png" height="20"/>
 					</div>
 					<p>&copy; 2017 Connecta d.o.o.</p>
 				</div>
