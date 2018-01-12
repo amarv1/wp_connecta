@@ -45,7 +45,7 @@
 					<div class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle='dropdown'>Jezik</a>
 						<a class="m-langLink dropdown-toggle" data-toggle='dropdown' href="#"><span class="b-topBar__lang-flag m-es"></span>BS<span class="fa fa-caret-down"></span></a>
-						<ul class="dropdown-menu h-lang">
+						<ul class="dropdown-menu h-lang" style="display: none;">
 							<li><a class="m-langLink dropdown-toggle" data-toggle='dropdown' href="#"><span class="flag-icon flag-icon-es"></span>BS</a></li>
 							<li><a class="m-langLink dropdown-toggle" data-toggle='dropdown' href="#"><span class="b-topBar__lang-flag m-en"></span>EN</a></li>
 						</ul>
