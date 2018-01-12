@@ -12,7 +12,7 @@
                                 <h3><?php the_sub_field('pretitle') ?></h3>
                                 <h2><?php the_sub_field('title') ?></h2>
                                 <p><?php the_sub_field('subtitle') ?></p>
-                                <a class="btn m-btn" href="detail.html">Detaljnije<span class="fa fa-angle-right"></span></a>
+                                <a class="btn m-btn" href="<?php the_sub_field('link'); ?>">Detaljnije<span class="fa fa-angle-right"></span></a>
                             </div>
                             <div class="slider-overlay"></div>
                         </div>

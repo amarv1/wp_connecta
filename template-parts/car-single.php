@@ -14,7 +14,18 @@
 	<div class="b-items__cars-one-info">
 		<header class="b-items__cars-one-info-header s-lineDownLeft">
 			<h2><?php the_title(); ?></h2>
-			<span><?php the_field('price'); ?> KM</span>
+			<span>
+				<?php 
+				if(get_field('show_price')=='Sa PDV-om') {
+					echo(get_field('price_pdv') . ' KM');
+				}
+				elseif(get_field('show_price')=='EUR') {
+					echo(get_field('price_eur') . ' EUR');
+				}
+				elseif(get_field('show_price')=='Bez PDV-a') {
+					echo(get_field('price_no_pdv') . ' KM');
+				} ?>
+			</span>
 		</header>
 		<p>
 			<?php the_field('description'); ?> 
@@ -25,7 +36,7 @@
 		<div class="b-items__cars-one-info-details">
 			<div class="b-featured__item-links">
 				<a href=""><?php the_field('year'); ?></a>
-				<a href="">Polovno</a>
+				<a href="">Novo</a>
 				<a href=""><?php the_field('engine_type'); ?></a>
 				<a href=""><?php the_field('fuel_type'); ?></a>
 			</div>

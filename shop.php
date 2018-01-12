@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-4 col-xs-12">
 				<div class="b-infoBar__compare wow zoomInUp" data-wow-delay="0.5s">
-					<div class="dropdown">
+					<!-- <div class="dropdown">
 						<a href="#" class="dropdown-toggle b-infoBar__compare-item" data-toggle='dropdown'><span class="fa fa-clock-o"></span>Posljednji pregledi<span class="fa fa-caret-down"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="detail.html">Item</a></li>
@@ -32,7 +32,7 @@ get_header(); ?>
 							<li><a href="detail.html">Item</a></li>
 							<li><a href="detail.html">Item</a></li>
 						</ul>
-					</div>
+					</div> -->
 					<a href="compare.html" class="b-infoBar__compare-item"><span class="fa fa-compress"></span>Uporedi vozila: 2</a>
 				</div>
 			</div>
@@ -84,7 +84,7 @@ get_header(); ?>
 						}
 					?>
 				</div>
-				<div class="b-items__pagination wow zoomInUp" data-wow-delay="0.5s">
+				<!-- <div class="b-items__pagination wow zoomInUp" data-wow-delay="0.5s">
 					<div class="b-items__pagination-main">
 						<a data-toggle="modal" data-target="#myModal" href="#" class="m-left"><span class="fa fa-angle-left"></span></a>
 						<span class="m-active"><a href="#">1</a></span>
@@ -93,7 +93,7 @@ get_header(); ?>
 						<span><a href="#">4</a></span>
 						<a href="#" class="m-right"><span class="fa fa-angle-right"></span></a>    
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-lg-3 col-sm-4 col-xs-12">
 				<aside class="b-items__aside">
