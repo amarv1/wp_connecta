@@ -36,7 +36,7 @@
 			<div class="col-md-4 col-xs-6">
 				<nav class="b-topBar__nav">
 					<ul>
-						<li><a href="wp-admin">Log in</a></li>
+						<li><a href="/connecta/wp-admin">Log in</a></li>
 					</ul>
 				</nav>
 			</div>

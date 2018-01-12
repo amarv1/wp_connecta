@@ -134,7 +134,7 @@ a.m-langLink{
     background: url(../images/flags/fr.jpg);
 }
 
-.dropdown-menu{
+.sub-menu{
 	min-width: 100px;
     padding: 0;
     border-radius:0;
@@ -192,13 +192,13 @@ a.m-langLink{
     list-style: none;
     height: 38px;
 }
-.navbar-nav-menu > li > .dropdown-menu{
+.navbar-nav-menu > li > .sub-menu{
 	display: block !important;
 	height: 0px;
 	overflow: hidden;
 	opacity: 0;
 }
-.navbar-nav-menu > li.open > .dropdown-menu{
+.navbar-nav-menu > li.open > .sub-menu{
 	height: auto;
 	padding-bottom: 3px;
 	opacity: 1;

@@ -66,10 +66,10 @@
 		dropdownhover: function(options) {
 			/** Extra script for smoother navigation effect **/
 			if ($(window).width() > 798) {
-				$('.navbar-main-slide').on('mouseenter', '.navbar-nav-menu > .dropdown', function() {
+				$('.navbar-main-slide').on('mouseenter', '.navbar-nav-menu > .menu-item-has-children', function() {
 					"use strict";
 					$(this).addClass('open');
-				}).on('mouseleave', '.navbar-nav-menu > .dropdown', function() {
+				}).on('mouseleave', '.navbar-nav-menu > .menu-item-has-children', function() {
 					"use strict";
 					$(this).removeClass('open');
 				});
