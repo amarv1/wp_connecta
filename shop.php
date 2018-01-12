@@ -1,6 +1,6 @@
 <?php 
 /*
- Template Name: Shop
+ Template Name: Prodaja automobila
 */
 get_header(); ?>
 

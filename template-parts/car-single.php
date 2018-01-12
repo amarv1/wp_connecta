@@ -40,7 +40,7 @@
 				<a href=""><?php the_field('engine_type'); ?></a>
 				<a href=""><?php the_field('fuel_type'); ?></a>
 			</div>
-			<a href="" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
+			<a href="<?php echo get_post_permalink(); ?>" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
 		</div>
 	</div>
 </div>
