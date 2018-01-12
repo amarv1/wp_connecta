@@ -223,16 +223,16 @@ a.m-langLink{
     margin-left: 4px;
 }
 
-.h-nav li{
+.sub-menu li{
     display: block;
     float:none!important;
 }
 
-.h-nav{
+.sub-menu{
     margin-top: 0!important;
 }
 
-.h-nav li a{
+.sub-menu li a{
     display: block!important;
     text-align: left;
     padding: 10px 14px !important;
