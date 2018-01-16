@@ -1,7 +1,7 @@
 <div class="b-items__cars-one wow zoomInUp" data-wow-delay="0.5s">
-	<div class="b-items__cars-one-img">
+	<div class="b-items__cars-one-img" style="overflow:hidden">
 		<?php if(get_field('images')): ?>
-			<img src="<?php echo get_field('images')[0]['url'] ?>" alt='dodge'/>
+			<img src="<?php echo get_field('images')[0]['url'] ?>" alt='dodge' width="270" height="230"/>
 		<?php endif; ?>
 		<?php if(get_field('highlight')): ?>
 			<span class="b-items__cars-one-img-type m-premium"><?php the_field('highlight') ?></span>

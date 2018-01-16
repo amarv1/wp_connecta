@@ -33,7 +33,7 @@
     <?php while( have_rows('newsletter') ) : the_row();  ?>
         <section class="b-contact">
             <div class="container">
-                <div class="row wow zoomInLeft" data-wow-delay="0.3s" data-wow-offset="100">
+                <div class="row" data-wow-delay="0.3s">
                     <div class="col-xs-4">
                         <div class="b-contact-title">
                             <h5><?php the_sub_field('title') ?></h5><br />

@@ -36,7 +36,7 @@
 			<div class="col-md-4 col-xs-6">
 				<nav class="b-topBar__nav">
 					<ul>
-						<li><a href="/connecta/wp-admin">Log in</a></li>
+						<li><a href="/wp-admin">Log in</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -67,9 +67,11 @@
 				</div>
 			</div>
 			<div class="col-sm-9 col-xs-8">
-				<?php if(has_nav_menu('header-menu')): ?>
-				<?php get_template_part('main-menu', 'header-menu'); ?>
-				<?php endif; ?>
+				<div class="b-nav__list wow slideInRight">
+					<?php if(has_nav_menu('header-menu')): ?>
+					<?php get_template_part('main-menu', 'header-menu'); ?>
+					<?php endif; ?>
+				</div>
 			</div>
 		</div>
 	</div>

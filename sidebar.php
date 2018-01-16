@@ -11,7 +11,7 @@
 						</header>
 						<nav>
 							<ul class="b-blog__aside-categories-list">
-								<?php wp_list_categories(); ?>
+								<?php //wp_list_categories(); ?>
 								<li><a href="#">Savjeti za kupovinu vozila</a></li>
 								<li><a href="#">Novosti o vozilima</a></li>
 								<li class="m-active"><a href="#">Testovi</a></li>

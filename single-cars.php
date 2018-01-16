@@ -9,7 +9,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row wow zoomInUp" data-wow-delay="0.5s">
 			<div class="col-xs-3">
-				<div class="b-infoBar__premium"><?php echo(get_field('brand').' '.get_field('model')) ?></div>
+				<div class="b-infoBar__premium"><?php echo(get_field('brand')) ?></div>
 			</div>
 			<div class="col-xs-9">
 				<div class="b-infoBar__btns">
@@ -28,25 +28,43 @@ get_header(); ?>
 				<div class="col-sm-9 col-xs-12">
 					<div class="b-detail__head-title">
 						<h1><?php echo(get_field('brand').' '.get_field('model')) ?></h1>
-						<h3>Neki text</h3>
+						<h3><?php
+//$terms = get_the_terms( $post->ID , 'categories' );
+//foreach ( $terms as $term ) {
+//echo $term->name;
+//}
+						the_field('car_id');
+?></h3>
 					</div>
 				</div>
 				<div class="col-sm-3 col-xs-12">
 					<div class="b-detail__head-price">
-						<div class="b-detail__head-price-num"><?php echo(get_field('price').' KM') ?></div>
-						<p>Sa PDV-om</p>
+						<div class="b-detail__head-price-num">
+							<?php 
+								if(get_field('show_price')=='Sa PDV-om') {
+									echo(get_field('price_pdv') . ' KM');
+								}
+								elseif(get_field('show_price')=='EUR') {
+									echo(get_field('price_eur') . ' EUR');
+								}
+								elseif(get_field('show_price')=='Bez PDV-a') {
+									echo(get_field('price_no_pdv') . ' KM');
+								} 
+							?>
+						</div>
+						<p><?php the_field('show_price') ?></p>
 					</div>
 				</div>
 			</div>
 		</header>
 		<div class="b-detail__main">
 			<div class="row">
-				<div class="col-md-8 col-xs-12">
+				<div class="col-md-7 col-xs-12">
 					<div class="b-detail__main-info">
 						<?php if(get_field('images')): ?>
 							<div class="b-detail__main-info-images wow zoomInUp" data-wow-delay="0.5s">
 								<div class="row m-smallPadding">
-									<div class="col-xs-10">
+									<div class="col-xs-12">
 										<ul class="b-detail__main-info-images-big bxslider enable-bx-slider" data-pager-custom="#bx-pager" data-mode="horizontal" data-pager-slide="true" data-mode-pager="vertical" data-pager-qty="5">
 											<?php foreach(get_field('images') as $image): ?>
 												<li class="s-relative">                                        
@@ -55,16 +73,6 @@ get_header(); ?>
 												</li>
 											<?php endforeach; ?>
 										</ul>
-									</div>
-									<div class="col-xs-2 pagerSlider pagerVertical">
-										<div class="b-detail__main-info-images-small" id="bx-pager">
-											<?php foreach(get_field('images') as $image): ?>
-											<a href="#" data-slide-index="0" class="b-detail__main-info-images-small-one">
-												<img class="img-responsive" src="<?php echo $image['url'] ?>" alt="nissan" />
-											</a>
-											<?php endforeach; ?>
-											
-										</div>
 									</div>
 								</div>
 							</div>
@@ -134,34 +142,56 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="b-detail__main-info-text wow zoomInUp" data-wow-delay="0.5s">
+
+						<?php 
+						$equipment = explode(';', get_field('equipment'));
+						if($equipment.length): ?>
+							<div class="b-detail__main-info-extra wow zoomInUp" data-wow-delay="0.5s">
+								<h2 class="s-titleDet">OPREMA <?php if(get_field('equipment_name')) {
+										echo(' - '.get_field('equipment_name'));
+									} ?></h2>
+								<div class="row">
+									<div class="col-xs-4">
+										<ul>
+											<?php foreach ($equipment as $key => $value) {
+												if($key<6) {
+													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+												}
+											} ?>
+										</ul>
+									</div>
+									<div class="col-xs-4">
+										<ul>
+											<?php foreach ($equipment as $key => $value) {
+												if($key>=6 && $key<12) {
+													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+												}
+											} ?>
+										</ul>
+									</div>
+									<div class="col-xs-4">
+										<ul>
+											<?php foreach ($equipment as $key => $value) {
+												if($key>=12 && $key<18) {
+													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+												}
+											} ?>
+										</ul>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
+
+
+						<div class="b-detail__main-info-text wow zoomInUp" data-wow-delay="0.5s" style="margin-top:65px">
 							<div class="b-detail__main-aside-about-form-links">
-								<a href="#" class="j-tab m-active s-lineDownCenter" data-to='#info1'>Informacije</a>
-								<a href="#" class="j-tab" data-to='#info2'>ZAKAŽITE TESTNU VOŽNJU</a>
+								<a href="#" class="j-tab m-active s-lineDownCenter" data-to='#info1'>Napomena</a>
+								<!-- <a href="#" class="j-tab" data-to='#info2'>ZAKAŽITE TESTNU VOŽNJU</a>
 								<a href="#" class="j-tab" data-to='#info3'>NEŠTO TREĆE</a>
-								<a href="#" class="j-tab" data-to='#info4'>ZAKAŽITE SASTANAK</a>
+								<a href="#" class="j-tab" data-to='#info4'>ZAKAŽITE SASTANAK</a> -->
 							</div>
 							<div id="info1">
-								<p>The 2016 Nissan Maxima is powered by a 3.5-liter V6 engine with 300 horsepower, 10 more than the engine in the outgoing
-									model. A continuously variable transmission and front-wheel drive are standard in all models. Nissan expects the 2016 Maxima
-									to return 22/30 mpg city/highway, which is an improvement over the previous model's EPA-estimated 19/26 mpg.</p>
-								<p>
-									The 2016 Nissan Maxima seats five and comes with a power-adjustable driver,seat, an eight-speaker audio system, Bluetooth,
-									satellite radio, HD Radio, push-button start, a rearview camera, two USB ports, the NissanConnect infotainment system,
-									navigation, an 8-inch color display screen and voice controls for phone, audio and navigation functions. Leather upholstery,
-									heated and ventilated front seats, an 11-speaker Bose audio system, a 360-degree parking camera system, adaptive cruise
-									control, blind spot warning, rear cross traffic alert, front and rear parking sensors and forward collision warning with automatic
-									braking are available. The 2016 Nissan Maxima starts at $33,235 including destination fees.</p>
-								<p>The full review of the 2016 Nissan Maxima is coming soon. In the meantime, you can see pictures, research prices or view and
-									compare specs for the 2016 Nissan Maxima. If you, considering the 2014 Nissan Maxima, you can read our review.</p>
-								<p>Vestibulum auctor lacinia nunc. Nunc ut turpis.Sed libero magna, fermentum viverra, egestas non, fermentum sed, elit. Aenean
-									erat orci, mollis quis gravida sed, mollis a, quam. Integer fermentum neque egestas orci. Nunc posuere, felis sit amet faucibus
-									convallis tortor enim viverra quam, hendrerit interdum dui quam ut lacus. Donec quis quam in ante condimentum blan erdit.
-									Integer et urna. Vestibulum nisl. Ut ante est, imperdiet dignissim eleifend sit amet lacinia tempor justo. Nunc ornare atm nibh.
-									Fusce ut felis. </p>
-								<p>Donec ullamcorper nisi ac lectus. Proin at orci. Suspendisse nec orci nec elit convallis porttitor. Praesent sit amet turpis eu nisl
-									faucibus pharetra. Sed eu felis. Etiam eleifend nisl nec lectus. Ut suscipit pede eu diam. Aenean vitae quam. Cras felis. Sed utdw
-									nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
+								<?php the_field('description') ?>
 							</div>
 							<div id="info2">
 								<p>The full review of the 2016 Nissan Maxima is coming soon. In the meantime, you can see pictures, research prices or view and
@@ -191,150 +221,182 @@ get_header(); ?>
 									nibh. Duis libero. Vivamus pharetra libero non facilisis imperdiet mi augue feugiat nisl.</p>
 							</div>
 						</div>
-						<div class="b-detail__main-info-extra wow zoomInUp" data-wow-delay="0.5s">
-							<h2 class="s-titleDet">EXTRA FEATURES</h2>
-							<div class="row">
-								<div class="col-xs-4">
-									<ul>
-										<li><span class="fa fa-check"></span>Security System</li>
-										<li><span class="fa fa-check"></span>Air Conditioning</li>
-										<li><span class="fa fa-check"></span>Alloy Wheels</li>
-										<li><span class="fa fa-check"></span>Anti-Lock Brakes (ABS)</li>
-										<li><span class="fa fa-check"></span>Anti-Theft</li>
-										<li><span class="fa fa-check"></span>Anti-Starter</li>
-									</ul>
-								</div>
-								<div class="col-xs-4">
-									<ul>
-										<li><span class="fa fa-check"></span>Dual Airbag</li>
-										<li><span class="fa fa-check"></span>Intermittent Wipers</li>
-										<li><span class="fa fa-check"></span>Keyless Entry</li>
-										<li><span class="fa fa-check"></span>Power Mirrors</li>
-										<li><span class="fa fa-check"></span>Power Seat</li>
-										<li><span class="fa fa-check"></span>Power Steering</li>
-									</ul>
-								</div>
-								<div class="col-xs-4">
-									<ul>
-										<li><span class="fa fa-check"></span>CD Player</li>
-										<li><span class="fa fa-check"></span>Driver Side Airbag</li>
-										<li><span class="fa fa-check"></span>Power Windows</li>
-										<li><span class="fa fa-check"></span>Remote Start</li>
-									</ul>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-xs-12">
+				<div class="col-md-5 col-xs-12">
 					<aside class="b-detail__main-aside">
 						<div class="b-detail__main-aside-desc wow zoomInUp" data-wow-delay="0.5s">
 							<h2 class="s-titleDet">Opis</h2>
-							<div class="row">
+							<?php $field = get_field_object('brand'); if($field): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Marka</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Mazda</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Model</h4>
 								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('model'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">3</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Kilometraža</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">39,000 km</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Tip</h4>
 								</div>
+							<?php endif; ?>	
+							<?php $field = get_field_object('car_type'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Coupe</p>
-								</div>
-							</div>
-							
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Motor</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">V-6</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Drivetrain</h4>
 								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('type'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">EWD</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Transmisija</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Dual-Clutch Automatic</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Boja</h4>
 								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('doors'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Crvena</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Unutrašnjost</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Koža - Crna</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Sjedišta/Vrata</h4>
 								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('seats'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">5 Putnika / 4 Vrata</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Gorivo</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">Dizel</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Potrošnja/Grad </h4>
 								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('empty_mass'); if($field['value']): ?>
+								<div class="row">
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">6.8L/100km</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-6">
-									<h4 class="b-detail__main-aside-desc-title">Potrošnja/Autoput</h4>
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
 								<div class="col-xs-6">
-									<p class="b-detail__main-aside-desc-value">5.0L/100km</p>
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
-							</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('year'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('mileage'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('engine'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('engine_volume'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('engine_power'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('fuel_type'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('transmission'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('pogon'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('color'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
+							<?php $field = get_field_object('fuel_consumption'); if($field['value']): ?>
+								<div class="row">
+								<div class="col-xs-6">
+									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
+								</div>
+								<div class="col-xs-6">
+									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
+								</div>
+								</div>
+							<?php endif; ?>
 						</div>
 						<div class="b-detail__main-aside-about wow zoomInUp" data-wow-delay="0.5s">
 							<h2 class="s-titleDet">Informacije o vozilu</h2>

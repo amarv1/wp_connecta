@@ -9,7 +9,7 @@
 	</div>
 	<div class="collapse navbar-collapse navbar-main-slide" id="nav">
 		<ul class="navbar-nav-menu">
-			<?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_id' => 'nav',)); ?>
+			<?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_id' => 'nav', 'menu_class' => 'navbar-nav-menu')); ?>
 		</ul>
 	</div>
 </div>

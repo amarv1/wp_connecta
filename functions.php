@@ -21,3 +21,13 @@ function register_my_menus() {
   );
 }
 add_action( 'init', 'register_my_menus' );
+
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page(array(
+    'page_title'  => 'Informacije',
+    'menu_title'  => 'Informacije',
+    'menu_slug'   => 'general-info',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+  ));
+}
