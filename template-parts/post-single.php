@@ -20,7 +20,7 @@
 						<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' ) ); ?>
 					</div>
 					<p><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>" class="btn m-btn m-readMore">PROČITAJ VIŠE<span class="fa fa-angle-right"></span></a>
+					<a href="<?php echo get_permalink(); ?>" class="btn m-btn m-readMore">PROČITAJ VIŠE<span class="fa fa-angle-right"></span></a>
 				</div>
 			</div>
 		</div>

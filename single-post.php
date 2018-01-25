@@ -7,16 +7,14 @@ get_header(); ?>
 
 <section class="b-pageHeader">
 	<div class="container">
-		<h1 class="wow zoomInLeft" data-wow-delay="0.7s">AutoClub Blog</h1>
-		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.7s">
-			<h3>Read Latest Auto News &amp; Reviews</h3>
-		</div>
+		<h1 class="wow zoomInLeft" data-wow-delay="0.7s">Blog</h1>
+		
 	</div>
 </section><!--b-pageHeader-->
 
 <div class="b-breadCumbs s-shadow">
 	<div class="container wow zoomInUp" data-wow-delay="0.7s">
-		<a href="home.html" class="b-breadCumbs__page">Home</a><span class="fa fa-angle-right"></span><a href="blog.html" class="b-breadCumbs__page">Blog Style 1</a><span class="fa fa-angle-right"></span><a href="article.html" class="b-breadCumbs__page m-active">Blog Post</a>
+		<a href="" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="" class="b-breadCumbs__page">Blog</a><span class="fa fa-angle-right"></span><a href="" class="b-breadCumbs__page m-active"><?php single_post_title(); ?></a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -34,28 +32,22 @@ get_header(); ?>
 									</header>
 									<div class="b-blog__posts-one-body-main wow zoomInUp" data-wow-delay="0.5s">
 										<div class="b-blog__posts-one-body-main-img">
-											<ul class="bxslider enable-bx-slider" data-pager-custom="#bx-pager" data-mode="fade" data-pager-slide="false" data-mode-pager="horizontal" data-pager-qty="0">
+											<?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' ) ); ?>
+											<!-- <ul class="bxslider enable-bx-slider" data-pager-custom="#bx-pager" data-mode="fade" data-pager-slide="false" data-mode-pager="horizontal" data-pager-qty="0">
 												<li><img class="img-responsive" src="media/750x300/blogBig1.jpg" alt="jaguar" /></li>
-											</ul>
-											<div class="b-blog__posts-one-body-main-img-small" id="bx-pager">
+											</ul> -->
+											<!-- <div class="b-blog__posts-one-body-main-img-small" id="bx-pager">
 												<a href="#" data-slide-index="0"><img src="media/90x65/smallBlog1.jpg" alt="car" /></a>
 												<a href="#" data-slide-index="1"><img src="media/90x65/smallBlog2.jpg" alt="car" /></a>
 												<a href="#" data-slide-index="2"><img src="media/90x65/smallBlog3.jpg" alt="car" /></a>
-											</div>
+											</div> -->
 										</div>
-										<p>Test <?php the_content(); ?></p>
+										<p><?php  setup_postdata($post);the_content(); ?></p>
 									</div>
 									<div class="b-blog__posts-one-body-tags wow zoomInUp" data-wow-delay="0.5s">
 										<span class="fa fa-tags"></span>
 										TAGS:
-										<a href="#">bmw</a>
-										<a href="#">comparison</a>
-										<a href="#">comparison test</a>
-										<a href="#">coupe</a>
-										<a href="#">f-type</a>
-										<a href="#">jaguar</a>
-										<a href="#">m4</a>
-										<a href="#">slideshow</a>
+										<?php the_tags();?>
 									</div>
 								</div>
 							</div>

@@ -9,7 +9,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row wow zoomInUp" data-wow-delay="0.5s">
 			<div class="col-xs-3">
-				<div class="b-infoBar__premium"><?php echo(get_field('brand')) ?></div>
+				<div class="b-infoBar__premium"><?php echo(get_field('car_id')) ?></div>
 			</div>
 			<div class="col-xs-9">
 				<div class="b-infoBar__btns">
@@ -27,13 +27,13 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-9 col-xs-12">
 					<div class="b-detail__head-title">
-						<h1><?php echo(get_field('brand').' '.get_field('model')) ?></h1>
+						<h1><?php echo(get_field('model')) ?></h1>
 						<h3><?php
 //$terms = get_the_terms( $post->ID , 'categories' );
 //foreach ( $terms as $term ) {
 //echo $term->name;
 //}
-						the_field('car_id');
+						the_field('brand');
 ?></h3>
 					</div>
 				</div>
@@ -229,170 +229,170 @@ get_header(); ?>
 							<h2 class="s-titleDet">Opis</h2>
 							<?php $field = get_field_object('brand'); if($field): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('model'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>	
 							<?php $field = get_field_object('car_type'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('type'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('doors'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('seats'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('empty_mass'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('year'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('mileage'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('engine'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('engine_volume'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('engine_power'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('fuel_type'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('transmission'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('pogon'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('color'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>
 							<?php endif; ?>
 							<?php $field = get_field_object('fuel_consumption'); if($field['value']): ?>
 								<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-7">
 									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
 								</div>
 								</div>

@@ -16,8 +16,7 @@ get_header(); ?>
 <div class="b-breadCumbs s-shadow wow zoomInUp" data-wow-delay="0.5s">
 	<div class="container">
 		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span>
-		<a href="about.html" class="b-breadCumbs__page m-active">Usluge</a><span class="fa fa-angle-right"></span>
-		<a href="about.html" class="b-breadCumbs__page m-active">Fleet Management</a>
+		<a href="about.html" class="b-breadCumbs__page m-active"><?php the_title() ?></a>
 	</div>
 </div><!--b-breadCumbs-->
 
