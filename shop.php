@@ -22,9 +22,9 @@ get_header(); ?>
 <div class="b-infoBar">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-xs-12">
+			<!-- <div class="col-md-4 col-xs-12">
 				<div class="b-infoBar__compare wow zoomInUp" data-wow-delay="0.5s">
-					<!-- <div class="dropdown">
+					<div class="dropdown">
 						<a href="#" class="dropdown-toggle b-infoBar__compare-item" data-toggle='dropdown'><span class="fa fa-clock-o"></span>Posljednji pregledi<span class="fa fa-caret-down"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="detail.html">Item</a></li>
@@ -32,18 +32,18 @@ get_header(); ?>
 							<li><a href="detail.html">Item</a></li>
 							<li><a href="detail.html">Item</a></li>
 						</ul>
-					</div> -->
-					<a href="compare.html" class="b-infoBar__compare-item"><span class="fa fa-compress"></span>Uporedi vozila: 2</a>
+					</div>
+					<a href="compare.html" class="b-infoBar__compare-item"><span class="fa fa-compress"></span>Uporedi vozila: 2</a> 
 				</div>
-			</div>
-			<div class="col-lg-8 col-xs-12">
+			</div> -->
+			<div class="col-md-offset-4 col-md-8 col-xs-12">
 				<div class="b-infoBar__select">
 					<form method="post" action="/">
-						<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
+						<!-- <div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 							<span class="b-infoBar__select-one-title">Tip liste</span>
 							<a href="listingsTwo.html" class="m-list m-active"><span class="fa fa-list"></span></a>
 							<a href="listTable.html" class="m-table"><span class="fa fa-table"></span></a>
-						</div>
+						</div> -->
 						<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 							<span class="b-infoBar__select-one-title">Prikaži na stranici</span>
 							<select name="select1" class="m-select">
@@ -169,7 +169,7 @@ get_header(); ?>
 							</footer>
 						</form>
 					</div>
-					<div class="b-items__aside-sell wow zoomInUp" data-wow-delay="0.5s">
+					<!-- <div class="b-items__aside-sell wow zoomInUp" data-wow-delay="0.5s">
 						<div class="b-items__aside-sell-img">
 							<h3>Oglas</h3>
 						</div>
@@ -181,7 +181,7 @@ get_header(); ?>
 							</p>
 							<a href="submit1.html" class="btn m-btn">Registruj se<span class="fa fa-angle-right"></span></a>
 						</div>
-					</div>
+					</div> -->
 				</aside>
 			</div>
 		</div>
