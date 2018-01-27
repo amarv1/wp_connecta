@@ -50,6 +50,16 @@
     line-height: 1.9;
 }
 
+.b-best__info ul{
+    font: 300 13px 'Open Sans',sans-serif;
+    margin: 0 0 15px 0;
+    line-height: 1.9;
+}
+
+.b-best__info ul>li{
+    margin: 0 0 15px 0;
+}
+
 /* What */
 .b-what{
     padding: 85px 0;

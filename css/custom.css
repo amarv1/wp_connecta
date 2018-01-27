@@ -43,3 +43,7 @@ height: 0;
 .mb-150 {
     margin-bottom: 150px;
 }
+
+ul>li {
+    font: 300 13px 'Open Sans',sans-serif;
+}

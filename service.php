@@ -32,7 +32,7 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 					<?php if(get_sub_field('image_alignment')=='Lijevo'): ?>
-						<div class="row mb-150 text-right">
+						<div class="row text-right">
 							<div class="col-sm-6 col-xs-12">
 								<img class="img-responsive center-block wow zoomInLeft" data-wow-delay="0.5s" alt="best" src="<?php the_sub_field('image') ?>" />
 							</div>
@@ -46,7 +46,7 @@ get_header(); ?>
 							</div>
 						</div>
 					<?php elseif(get_sub_field('image_alignment')=='Desno'): ?>
-						<div class="row mb-150">
+						<div class="row">
 							<div class="col-sm-6 col-xs-12">
 								<div class="b-best__info">
 									<header class="b-best__info-head">
