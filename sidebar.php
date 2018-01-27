@@ -33,7 +33,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="b-blog__aside-popular wow zoomInUp" data-wow-delay="0.3s">
+					<!-- <div class="b-blog__aside-popular wow zoomInUp" data-wow-delay="0.3s">
 						<header class="s-lineDownLeft">
 							<h2 class="s-titleDet">POPULARNO</h2>
 						</header>
@@ -49,5 +49,5 @@
 								<div class="b-blog__aside-popular-posts-one-date"><span class="fa fa-calendar-o"></span>2 Oktobar 2017</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</aside>
