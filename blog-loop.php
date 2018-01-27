@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section class="b-pageHeader">
 	<div class="container">
-		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s">Blog</h1>
+		
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
 			<h3>Blog</h3>
 		</div>
