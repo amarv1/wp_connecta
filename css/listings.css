@@ -420,7 +420,6 @@ select.m-select + span.fa{
 
 .b-items__cars-one-info-km{
     font: 600 12px 'Open Sans',sans-serif;
-    text-transform: uppercase;
 }
 
 .b-items__cars-one-info-km span.fa{

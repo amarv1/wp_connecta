@@ -75,7 +75,7 @@ get_header(); ?>
 			<div class="col-lg-9 col-sm-8 col-xs-12">
 				<div class="b-items__cars">
 					<?php 
-						$query = new WP_Query( array( 'post_type' => 'cars' ) );
+						$query = new WP_Query( array( 'post_type' => 'cars', 'posts_per_page'=>'-1' ) );
 						if($query->have_posts()) {
 							while($query->have_posts()) {
 								$query->the_post();
