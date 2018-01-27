@@ -15,7 +15,7 @@ get_header(); ?>
 
 <div class="b-breadCumbs s-shadow wow zoomInUp" data-wow-delay="0.5s">
 	<div class="container">
-		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active">Shop</a>
+		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="about.html" class="b-breadCumbs__page m-active"><?php the_title() ?></a>
 	</div>
 </div><!--b-breadCumbs-->
 
@@ -75,11 +75,23 @@ get_header(); ?>
 			<div class="col-lg-9 col-sm-8 col-xs-12">
 				<div class="b-items__cars">
 					<?php 
-						$query = new WP_Query( array( 'post_type' => 'cars', 'posts_per_page'=>'-1' ) );
+						$query = new WP_Query( array( 
+							'post_type' => 'cars', 
+							'posts_per_page'=>'-1', 
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'car_sale_type',
+									'field'    => 'slug',
+									'terms'    => 'novo',
+									'operator' 		   => 'NOT IN',
+								),
+							),
+							) );
 						if($query->have_posts()) {
 							while($query->have_posts()) {
 								$query->the_post();
 								get_template_part('template-parts/car-single', 'page');
+								//var_dump(wp_get_post_terms( get_the_ID(), 'car_sale_type'));
 							}
 						}
 					?>
