@@ -2,10 +2,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-md-offset-3 col-xs-6 col-xs-offset-6">
+
 				<ul class="b-features__items">
-					<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100">Povoljno</li>
-					<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100">Bogata ponuda</li>
-					<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100">Kvalitet</li>
+					<?php if(have_rows('footer', 'option')): ?>
+						<?php while( have_rows('footer', 'option') ): the_row(); ?>
+							<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100"><?php echo get_sub_field('motive1', 'option') ?></li>
+							<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100"><?php echo get_sub_field('motive2', 'option') ?></li>
+							<li class="wow zoomInUp" data-wow-delay="0.3s" data-wow-offset="100"><?php echo get_sub_field('motive3', 'option') ?></li>
+						<?php endwhile; ?>
+				    <?php endif; ?>
 				</ul>
 			</div>
 		</div>
@@ -129,7 +134,7 @@
 						<!-- <h3><a href="home.html"><span>Connecta</span></a></h3> -->
 						<img src="<?php echo get_field('logo', 'option'); ?>" height="20"/>
 					</div>
-					<p>&copy; 2017 Connecta d.o.o.</p>
+					<p>&copy; 2018 Connecta d.o.o.</p>
 				</div>
 			</div>
 			<div class="col-xs-8">
