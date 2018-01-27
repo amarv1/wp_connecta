@@ -37,14 +37,11 @@
 					</article>
 					<article class="b-info__aside-article">
 						<h3>O nama</h3>
-						<p>Vestibulum varius od lio eget conseq
-							uat blandit, lorem auglue comm lodo
-							nisl non ultricies lectus nibh mas lsa
-							Duis scelerisque aliquet. Ante donec
-							libero pede porttitor dacu msan esct
-							venenatis quis.</p>
+						<?php while(have_rows('footer','option')): the_row(); ?>
+							<p><?php echo get_sub_field('footer_about', 'option'); ?></p>
+						<?php endwhile; ?>
 					</article>
-					<a href="about.html" class="btn m-btn">Saznajte više<span class="fa fa-angle-right"></span></a>
+					<a href="/index.php/o-nama/" class="btn m-btn">Saznajte više<span class="fa fa-angle-right"></span></a>
 				</aside>
 			</div>
 			<div class="col-md-3 col-xs-6">
