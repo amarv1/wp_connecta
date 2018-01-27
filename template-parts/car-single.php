@@ -31,7 +31,7 @@
 			<?php the_field('description'); ?> 
 		</p>
 		<div class="b-items__cars-one-info-km">
-			<span class="fa fa-tachometer"></span> <?php the_field('mileage'); ?> KM
+			<span class="fa fa-tachometer"></span> <?php the_field('mileage'); ?> km
 		</div>
 		<div class="b-items__cars-one-info-details">
 			<div class="b-featured__item-links">
