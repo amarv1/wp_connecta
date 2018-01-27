@@ -12,7 +12,7 @@
                                 <h3><?php the_sub_field('pretitle') ?></h3>
                                 <h2><?php the_sub_field('title') ?></h2>
                                 <p><?php the_sub_field('subtitle') ?></p>
-                                <a class="btn m-btn" href="<?php the_sub_field('link'); ?>">Detaljnije<span class="fa fa-angle-right"></span></a>
+                                <a class="btn m-btn" href="<?php echo get_sub_field('link') ?>">Detaljnije<span class="fa fa-angle-right"></span></a>
                             </div>
                             <div class="slider-overlay"></div>
                         </div>
@@ -195,14 +195,14 @@
 
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda_asset.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     45 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -216,7 +216,7 @@
 
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda3_asset.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -224,7 +224,7 @@
                                     30 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -237,7 +237,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda5_asset.jpg" alt="mers" width="186" />
                                     <span class="m-leasing">Akcija</span>
                                 </a>
@@ -245,7 +245,7 @@
                                     38 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -258,7 +258,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda3_asset.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -266,7 +266,7 @@
                                     30 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -279,14 +279,14 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda_asset.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     45 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -307,14 +307,14 @@
                     <div id="carousel-small" class="owl-carousel enable-owl-carousel" data-items="4" data-navigation="true" data-auto-play="true" data-stop-on-hover="true" data-items-desktop="4" data-items-desktop-small="4" data-items-tablet="3" data-items-tablet-small="2">
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian 3</a></h5>
+                                <h5><a href="">Nokian 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -325,7 +325,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre5_edited.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -333,7 +333,7 @@
                                     150 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian Authmn</a></h5>
+                                <h5><a href="">Nokian Authmn</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -344,7 +344,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                     <span class="m-leasing">Akcija</span>
                                 </a>
@@ -352,7 +352,7 @@
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian summer</a></h5>
+                                <h5><a href="">Nokian summer</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -363,7 +363,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre5_edited.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -371,7 +371,7 @@
                                     250 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian spring</a></h5>
+                                <h5><a href="">Nokian spring</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -382,14 +382,14 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian winter</a></h5>
+                                <h5><a href="">Nokian winter</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -471,14 +471,14 @@
                     <div id="carousel-small" class="owl-carousel enable-owl-carousel" data-items="4" data-navigation="true" data-auto-play="true" data-stop-on-hover="true" data-items-desktop="4" data-items-desktop-small="4" data-items-tablet="3" data-items-tablet-small="2">
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda_asset.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     45 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -491,7 +491,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda3_asset.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -499,7 +499,7 @@
                                     30 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -512,7 +512,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda5_asset.jpg" alt="mers" width="186" />
                                     <span class="m-leasing">Akcija</span>
                                 </a>
@@ -520,7 +520,7 @@
                                     38 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -533,7 +533,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda3_asset.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -541,7 +541,7 @@
                                     30 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -554,14 +554,14 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/mazda_asset.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     45 000 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Mazda 3</a></h5>
+                                <h5><a href="">Mazda 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>0,000 KM</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -582,14 +582,14 @@
                     <div id="carousel-small" class="owl-carousel enable-owl-carousel" data-items="4" data-navigation="true" data-auto-play="true" data-stop-on-hover="true" data-items-desktop="4" data-items-desktop-small="4" data-items-tablet="3" data-items-tablet-small="2">
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian 3</a></h5>
+                                <h5><a href="">Nokian 3</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -600,7 +600,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre5_edited.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -608,7 +608,7 @@
                                     150 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian Authmn</a></h5>
+                                <h5><a href="">Nokian Authmn</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -619,7 +619,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                     <span class="m-leasing">Akcija</span>
                                 </a>
@@ -627,7 +627,7 @@
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian summer</a></h5>
+                                <h5><a href="">Nokian summer</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -638,7 +638,7 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre5_edited.jpg" alt="mers" width="186" />
                                     <span class="m-premium">Novo</span>
                                 </a>
@@ -646,7 +646,7 @@
                                     250 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian spring</a></h5>
+                                <h5><a href="">Nokian spring</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
@@ -657,14 +657,14 @@
                         </div>
                         <div>
                             <div class="b-featured__item wow bounceInRight" data-wow-delay="0.3s" data-wow-offset="150">
-                                <a href="detail.html">
+                                <a href="">
                                     <img src="media/186x113/tyre1_edited.jpg" alt="mers" width="186" />
                                 </a>
                                 <div class="b-featured__item-price">
                                     200 KM
                                 </div>
                                 <div class="clearfix"></div>
-                                <h5><a href="detail.html">Nokian winter</a></h5>
+                                <h5><a href="">Nokian winter</a></h5>
                                 <div class="b-featured__item-count"><span class="fa fa-tachometer"></span>210 km/h</div>
                                 <div class="b-featured__item-links">
                                     <a href="#">Novo</a>
