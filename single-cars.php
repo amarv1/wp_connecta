@@ -78,16 +78,20 @@ get_header(); ?>
 							</div>
 						<?php endif; ?>
 						<div class="b-detail__main-info-characteristics wow zoomInUp" data-wow-delay="0.5s">
-							<div class="b-detail__main-info-characteristics-one">
-								<div class="b-detail__main-info-characteristics-one-top">
-									<div><span class="fa fa-car"></span></div>
-									<p>Brand New</p>
-								</div>
-								<div class="b-detail__main-info-characteristics-one-bottom">
-									Status
-								</div>
-							</div>
-							<div class="b-detail__main-info-characteristics-one">
+							<?php if(have_rows('highlight_info')): ?>
+								<?php while(have_rows('highlight_info')): the_row(); ?>
+									<div class="b-detail__main-info-characteristics-one">
+										<div class="b-detail__main-info-characteristics-one-top">
+											<div><span class="fa <?php echo get_sub_field('icon') ?>"></span></div>
+											<p><?php echo get_sub_field('value') ?></p>
+										</div>
+										<div class="b-detail__main-info-characteristics-one-bottom">
+											<?php echo get_sub_field('name') ?>
+										</div>
+									</div>
+								<?php endwhile; ?>
+							<?php endif; ?>
+							<!-- <div class="b-detail__main-info-characteristics-one">
 								<div class="b-detail__main-info-characteristics-one-top">
 									<div><span class="fa fa-trophy"></span></div>
 									<p>5,000KM</p>
@@ -140,7 +144,7 @@ get_header(); ?>
 								<div class="b-detail__main-info-characteristics-one-bottom">
 									On Highway
 								</div>
-							</div>
+							</div> -->
 						</div>
 
 						<?php 
