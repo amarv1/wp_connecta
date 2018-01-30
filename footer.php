@@ -53,16 +53,8 @@
     					foreach($recent_cars as $recent):
 					?>
 						<div class="b-info__latest-article wow zoomInUp" data-wow-delay="0.3s">
-							<div class="b-info__latest-article-photo m-audi"
-							<?php if(get_field('images', $recent['ID'])[0]['url']): ?>
-								style="background:  url(<?php echo get_field('images', $recent['ID'])[0]['url'] ?>) no-repeat;"
-							<?php endif; ?>
-							></div>
 							<div class="b-info__latest-article-info">
 								<h6><a href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a></h6>
-								<?php if(get_field('mileage', $recent['ID'])): ?>
-									<p><span class="fa fa-tachometer"></span> <?php echo get_field('mileage', $recent['ID']) ?> km</p>
-								<?php endif; ?>
 							</div>
 						</div>
 					<?php endforeach; ?>
