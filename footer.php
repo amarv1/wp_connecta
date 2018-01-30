@@ -47,50 +47,42 @@
 			<div class="col-md-3 col-xs-6">
 				<div class="b-info__latest">
 					<h3>NOVO U PONUDI</h3>
-					<div class="b-info__latest-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__latest-article-photo m-audi"></div>
-						<div class="b-info__latest-article-info">
-							<h6><a href="detail.html">MERCEDES-AMG</a></h6>
-							<p><span class="fa fa-tachometer"></span> 35,000 KM</p>
+					<?php 
+						$args = array( 'numberposts' => '3', 'post_type' => 'cars');
+    					$recent_cars = wp_get_recent_posts( $args );
+    					foreach($recent_cars as $recent):
+					?>
+						<div class="b-info__latest-article wow zoomInUp" data-wow-delay="0.3s">
+							<div class="b-info__latest-article-photo m-audi"
+							<?php if(get_field('images', $recent['ID'])[0]['url']): ?>
+								style="background:  url(<?php echo get_field('images', $recent['ID'])[0]['url'] ?>) no-repeat;"
+							<?php endif; ?>
+							></div>
+							<div class="b-info__latest-article-info">
+								<h6><a href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a></h6>
+								<?php if(get_field('mileage', $recent['ID'])): ?>
+									<p><span class="fa fa-tachometer"></span> <?php echo get_field('mileage', $recent['ID']) ?> km</p>
+								<?php endif; ?>
+							</div>
 						</div>
-					</div>
-					<div class="b-info__latest-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__latest-article-photo m-audiSpyder"></div>
-						<div class="b-info__latest-article-info">
-							<h6><a href="#">AUDI S8</a></h6>
-							<p><span class="fa fa-tachometer"></span> 89,000 KM</p>
-						</div>
-					</div>
-					<div class="b-info__latest-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__latest-article-photo m-aston"></div>
-						<div class="b-info__latest-article-info">
-							<h6><a href="#">PORCHE CAYENE</a></h6>
-							<p><span class="fa fa-tachometer"></span> 135,000 KM</p>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			<div class="col-md-3 col-xs-6">
 				<div class="b-info__twitter">
 					<h3>NOVOSTI</h3>
-					<div class="b-info__twitter-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__twitter-article-content">
-							<p>Novost od ponedeljka, neki naslov</p>
-							<span>20 minuta ranije</span>
+					<?php 
+						$args = array( 'numberposts' => '3' );
+    					$recent_posts = wp_get_recent_posts( $args );
+    					foreach($recent_posts as $recent):
+					?>
+						<div class="b-info__twitter-article wow zoomInUp" data-wow-delay="0.3s">
+							<div class="b-info__twitter-article-content">
+								<a href="<?php echo get_permalink($recent) ?>"><p><?php echo $recent['post_title'] ?></p></a>
+								<span><?php echo get_the_date('d.m.Y. | H:i', $recent) ?></span>
+							</div>
 						</div>
-					</div>
-					<div class="b-info__twitter-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__twitter-article-content">
-							<p>Duis scelerisque aliquet ante donec libero pede porttitor dacu</p>
-							<span>20 minutes ago</span>
-						</div>
-					</div>
-					<div class="b-info__twitter-article wow zoomInUp" data-wow-delay="0.3s">
-						<div class="b-info__twitter-article-content">
-							<p>Duis scelerisque aliquet ante donec libero pede porttitor dacu</p>
-							<span>20 minutes ago</span>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 			<div class="col-md-3 col-xs-6">
@@ -98,23 +90,23 @@
 					<p>KONTAKTIRAJTE NAS</p>
 					<div class="b-info__contacts-item">
 						<span class="fa fa-map-marker"></span>
-						<em>DŽEMALA BIJEDIĆA 172B, 71000 SARAJEVO</em>
+						<em><?php echo get_field('address', 'option') ?></em>
 					</div>
 					<div class="b-info__contacts-item">
 						<span class="fa fa-phone"></span>
-						<em>Tel:   +387 33 778 000</em>
+						<em>Tel:   <?php echo get_field('tel', 'option') ?></em>
 					</div>
 					<div class="b-info__contacts-item">
 						<span class="fa fa-fax"></span>
-						<em>FAX:  +387 33 778 001</em>
+						<em>FAX:  <?php echo get_field('fax', 'option') ?></em>
 					</div>
 					<div class="b-info__contacts-item">
 						<span class="fa fa-envelope"></span>
-						<em>Email:  info@connecta.ba</em>
+						<em>Email:  <?php echo get_field('email', 'option') ?></em>
 					</div>
 				</address>
 				<address class="b-info__map">
-					<a href="contacts.html">Naša lokacija</a>
+					<a href="<?php echo get_field('location', 'option') ?>">Naša lokacija</a>
 				</address>
 			</div>
 		</div>
@@ -136,10 +128,14 @@
 			</div>
 			<div class="col-xs-8">
 				<div class="b-footer__content wow fadeInRight" data-wow-delay="0.3s">
-					<div class="b-footer__content-social">
-						<a href="#"><span class="fa fa-facebook-square"></span></a>
-						<a href="#"><span class="fa fa-google-plus-square"></span></a>
-					</div>
+					<?php if(have_rows('social', 'option')): ?>
+						<div class="b-footer__content-social">
+							<?php while(have_rows('social', 'option')): the_row(); ?>
+								<a href="<?php echo get_sub_field('facebook') ?>"><span class="fa fa-facebook-square"></span></a>
+								<a href="<?php echo get_sub_field('google') ?>"><span class="fa fa-google-plus-square"></span></a>
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
 <!-- 					<nav class="b-footer__content-nav">
 						<ul>
 							<li><a href="home.html">Početna</a></li>

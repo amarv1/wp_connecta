@@ -23,14 +23,14 @@
 		<div class="row">
 			<div class="col-md-4 col-xs-6">
 				<div class="b-topBar__addr">
-					<span class="fa fa-map-marker"></span>
-					Džemala Bijedića 172b, 71000 SARAJEVO
+					<a href="<?php echo get_field('location', 'option') ?>"><span class="fa fa-map-marker"></span></a>
+					<?php echo get_field('address', 'option') ?>
 				</div>
 			</div>
 			<div class="col-md-2 col-xs-6">
 				<div class="b-topBar__tel">
 					<span class="fa fa-phone"></span>
-					+387 33 778 000
+					<?php echo get_field('tel', 'option') ?>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-6">
