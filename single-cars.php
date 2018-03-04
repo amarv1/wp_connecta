@@ -231,7 +231,27 @@ get_header(); ?>
 					<aside class="b-detail__main-aside">
 						<div class="b-detail__main-aside-desc wow zoomInUp" data-wow-delay="0.5s">
 							<h2 class="s-titleDet">Opis</h2>
-							<?php $field = get_field_object('brand'); if($field): ?>
+							<?php $characteristics = ['brand',
+							 'model',
+							 'car_type',
+							 'type',
+							 'doors',
+							 'seats',
+							 'empty_mass',
+							 'year',
+							 'mileage',
+							 'engine',
+							 'engine_volume',
+							 'engine_power',
+							 'fuel_type',
+							 'transmission',
+							 'pogon',
+							 'color',
+							 'fuel_consumption'
+							];
+							?>
+							<?php foreach($characteristics as $f): ?>
+								<?php $field = get_field_object($f); if($f): ?>
 								<div class="row">
 								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
@@ -241,166 +261,8 @@ get_header(); ?>
 								</div>
 								</div>
 							<?php endif; ?>
-							<?php $field = get_field_object('model'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>	
-							<?php $field = get_field_object('car_type'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('type'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('doors'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('seats'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('empty_mass'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('year'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('mileage'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('engine'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('engine_volume'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('engine_power'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('fuel_type'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('transmission'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('pogon'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('color'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
-							<?php $field = get_field_object('fuel_consumption'); if($field['value']): ?>
-								<div class="row">
-								<div class="col-xs-5">
-									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
-								</div>
-								<div class="col-xs-7">
-									<p class="b-detail__main-aside-desc-value"><?php echo $field['value'] ?></p>
-								</div>
-								</div>
-							<?php endif; ?>
+							<?php endforeach; ?>
+							
 						</div>
 						<div class="b-detail__main-aside-about wow zoomInUp" data-wow-delay="0.5s">
 							<h2 class="s-titleDet">Informacije o vozilu</h2>
