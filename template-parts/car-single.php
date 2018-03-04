@@ -13,7 +13,7 @@
 	</div>
 	<div class="b-items__cars-one-info">
 		<header class="b-items__cars-one-info-header s-lineDownLeft">
-			<h2><?php the_title(); ?></h2>
+			<h2><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<span>
 				<?php 
 				if(get_field('show_price')=='Sa PDV-om') {
@@ -36,7 +36,7 @@
 		<div class="b-items__cars-one-info-details">
 			<div class="b-featured__item-links">
 				<a href=""><?php the_field('year'); ?></a>
-				<a href="">Novo</a>
+				<a href=""><?php the_field('status'); ?></a>
 				<a href=""><?php the_field('engine_type'); ?></a>
 				<a href=""><?php the_field('fuel_type'); ?></a>
 			</div>
