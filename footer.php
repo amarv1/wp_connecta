@@ -24,10 +24,10 @@
 				<aside class="b-info__aside wow zoomInLeft" data-wow-delay="0.3s">
 					<article class="b-info__aside-article">
 						<h3>RADNO VRIJEME</h3>
-						<?php while(have_rows('work_time')): the_row(); ?>
+						<?php while(have_rows('work_time', 'option')): the_row(); ?>
 							<div class="b-info__aside-article-item">
-								<h6><?php echo get_sub_field('department_name', 'option') ?></h6>
-								<p><?php echo get_sub_field('department_worktime', 'option')?></p>
+								<h6><?php echo get_sub_field('department_name', 'option'); ?></h6>
+								<p><?php echo get_sub_field('department_worktime', 'option'); ?></p>
 							</div>
 						<?php endwhile; ?>
 					</article>
