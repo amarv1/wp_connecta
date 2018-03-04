@@ -24,16 +24,12 @@
 				<aside class="b-info__aside wow zoomInLeft" data-wow-delay="0.3s">
 					<article class="b-info__aside-article">
 						<h3>RADNO VRIJEME</h3>
-						<div class="b-info__aside-article-item">
-							<h6>Prodaja</h6>
-							<p>PON-PET : 8:00 - 16:00<br />
-								Vikendom ne radimo</p>
-						</div>
-						<div class="b-info__aside-article-item">
-							<h6>Servis</h6>
-							<p>PON-SUB : 8:00 - 17:00<br />
-								Nedeljom ne radimo</p>
-						</div>
+						<?php while(have_rows('work_time')): the_row(); ?>
+							<div class="b-info__aside-article-item">
+								<h6><?php echo get_sub_field('department_name', 'option') ?></h6>
+								<p><?php echo get_sub_field('department_worktime', 'option')?></p>
+							</div>
+						<?php endwhile; ?>
 					</article>
 					<article class="b-info__aside-article">
 						<h3>O nama</h3>
