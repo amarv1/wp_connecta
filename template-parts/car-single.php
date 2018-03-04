@@ -35,10 +35,10 @@
 		</div>
 		<div class="b-items__cars-one-info-details">
 			<div class="b-featured__item-links">
-				<?php if(get_field('year')) { echo('<a href="">'.the_field('year').'</a>'); } ?>
-				<?php if(get_field('status')) { echo('<a href="">'.the_field('status').'</a>'); } ?>
-				<?php if(get_field('engine_type')) { echo('<a href="">'.the_field('engine_type').'</a>'); } ?>
-				<?php if(get_field('fuel_type')) { echo('<a href="">'.the_field('fuel_type').'</a>'); } ?>
+				<?php if(get_field('year')) { echo('<a href="">'.get_field('year').'</a>'); } ?>
+				<?php if(get_field('status')) { echo('<a href="">'.get_field('status').'</a>'); } ?>
+				<?php if(get_field('engine_type')) { echo('<a href="">'.get_field('engine_type').'</a>'); } ?>
+				<?php if(get_field('fuel_type')) { echo('<a href="">'.get_field('fuel_type').'</a>'); } ?>
 			</div>
 			<a href="<?php echo get_post_permalink(); ?>" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
 		</div>
