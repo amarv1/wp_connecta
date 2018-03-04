@@ -410,12 +410,11 @@ get_header(); ?>
 								<p>Pozovite nas za više informacija o vozilu</p>
 							</div>
 							<div class="b-detail__main-aside-about-seller">
-								<p>Agent: <span>Ime Prezime</span></p>
 							</div>
 							<div class="b-detail__main-aside-about-form">
 								<div class="b-detail__main-aside-about-form-links">
-									<a href="#" class="j-tab m-active s-lineDownCenter" data-to='#form1'>GENERALNO</a>
-									<a href="#" class="j-tab" data-to='#form2'>ZAKAŽITE TESTNU VOŽNJU</a>
+									<a href="#" class="j-tab m-active s-lineDownCenter" data-to='#form1'>Pošalji upit</a>
+									<a href="#" class="j-tab" data-to='#form2'>Pošalji info na email</a>
 								</div>
 								<form id="form1" action="/" method="post">
 									<input type="text" placeholder="IME I PREZIME" value="" name="name" />
@@ -426,9 +425,7 @@ get_header(); ?>
 									<button type="submit" class="btn m-btn">Pošalji<span class="fa fa-angle-right"></span></button>
 								</form>
 								<form id="form2" action="/" method="post">
-									<input type="text" placeholder="IME I PREZIME" value="" name="name" />
-									<textarea name="text" placeholder="PORUKA"></textarea>
-									<div><input type="checkbox" name="one" value="" /><label>Pošalji mi kopiju poruke</label></div>
+									<input type="email" placeholder="EMAIL" value="" name="email" />
 									<button type="submit" class="btn m-btn">Pošalji<span class="fa fa-angle-right"></span></button>
 								</form>
 							</div>
