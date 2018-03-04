@@ -14,7 +14,7 @@ get_header(); ?>
 			<div class="col-xs-9">
 				<div class="b-infoBar__btns">
 					<a href="#" class="btn m-btn m-infoBtn">ISPRINTAJ STRANICU<span class="fa fa-angle-right"></span></a>
-					<a href="#" class="btn m-btn m-infoBtn">DOWNLOAD UPUTSTVO<span class="fa fa-angle-right"></span></a>
+					<a href="#" class="btn m-btn m-infoBtn">DOWNLOAD<span class="fa fa-angle-right"></span></a>
 				</div>
 			</div>
 		</div>

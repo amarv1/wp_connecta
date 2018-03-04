@@ -17,13 +17,13 @@
 			<span>
 				<?php 
 				if(get_field('show_price')=='Sa PDV-om') {
-					echo(get_field('price_pdv') . ' KM');
+					echo(get_field('price_pdv') . ' KM <h6 style="display:inline;"> sa PDV</h6>');
 				}
 				elseif(get_field('show_price')=='EUR') {
 					echo(get_field('price_eur') . ' EUR');
 				}
 				elseif(get_field('show_price')=='Bez PDV-a') {
-					echo(get_field('price_no_pdv') . ' KM');
+					echo(get_field('price_no_pdv') . ' KM <h6 style="display:inline;"> bez PDV</h6>');
 				} ?>
 			</span>
 		</header>
