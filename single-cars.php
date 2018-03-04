@@ -149,8 +149,8 @@ get_header(); ?>
 
 						<?php 
 						$equipment = explode(';', get_field('equipment'));
-						$column = $equipment.length/3;
-						if($equipment.length): ?>
+						$column = sizeof($equipment)/3;
+						if(sizeof($equipment)): ?>
 							<div class="b-detail__main-info-extra wow zoomInUp" data-wow-delay="0.5s">
 								<h2 class="s-titleDet">OPREMA <?php if(get_field('equipment_name')) {
 										echo(' - '.get_field('equipment_name'));
@@ -159,7 +159,7 @@ get_header(); ?>
 									<div class="col-xs-4">
 										<ul>
 											<?php foreach ($equipment as $key => $value) {
-												if($key<$equipment.length/3) {
+												if($key<$column) {
 													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
 												}
 											} ?>
