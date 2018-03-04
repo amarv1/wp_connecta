@@ -160,7 +160,9 @@ get_header(); ?>
 										<ul>
 											<?php foreach ($equipment as $key => $value) {
 												if($key<$column) {
-													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													if($value) {
+														echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													}
 												}
 											} ?>
 										</ul>
@@ -169,7 +171,9 @@ get_header(); ?>
 										<ul>
 											<?php foreach ($equipment as $key => $value) {
 												if($key>=$column && $key<2*$column) {
-													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													if($value) {
+														echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													}
 												}
 											} ?>
 										</ul>
@@ -178,7 +182,9 @@ get_header(); ?>
 										<ul>
 											<?php foreach ($equipment as $key => $value) {
 												if($key>=2*$column && $key<3*$column) {
-													echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													if($value) {
+														echo('<li><span class="fa fa-check"></span>' . $value . '</li>');
+													}
 												}
 											} ?>
 										</ul>
