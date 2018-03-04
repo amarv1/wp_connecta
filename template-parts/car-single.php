@@ -35,10 +35,10 @@
 		</div>
 		<div class="b-items__cars-one-info-details">
 			<div class="b-featured__item-links">
-				<a href=""><?php the_field('year'); ?></a>
-				<a href=""><?php the_field('status'); ?></a>
-				<a href=""><?php the_field('engine_type'); ?></a>
-				<a href=""><?php the_field('fuel_type'); ?></a>
+				<a href=""><?php if(get_field('year')) { the_field('year'); } ?></a>
+				<a href=""><?php if(get_field('status')) { the_field('status'); } ?></a>
+				<a href=""><?php if(get_field('engine_type')) { the_field('engine_type'); } ?></a>
+				<a href=""><?php if(get_field('fuel_type')) { the_field('fuel_type'); } ?></a>
 			</div>
 			<a href="<?php echo get_post_permalink(); ?>" class="btn m-btn">Više<span class="fa fa-angle-right"></span></a>
 		</div>
