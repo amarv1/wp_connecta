@@ -243,7 +243,7 @@ get_header(); ?>
 							 'allowed_mass',
 							 'volume',
 							 'year',
-							 'first_reg'
+							 'first_reg',
 							 'first_reg_place',
 							 'reg_expire_date',
 							 'mileage',
@@ -268,7 +268,7 @@ get_header(); ?>
 							];
 							?>
 							<?php foreach($characteristics as $f): ?>
-								<?php $field = get_field_object($f); if($f): ?>
+								<?php $field = get_field_object($f);if($field['value']!==''): ?>
 								<div class="row">
 								<div class="col-xs-5">
 									<h4 class="b-detail__main-aside-desc-title"><?php echo $field['label'] ?></h4>
