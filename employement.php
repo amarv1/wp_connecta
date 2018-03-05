@@ -6,16 +6,16 @@ get_header(); ?>
 
 <section class="b-pageHeader">
 	<div class="container">
-		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s">Zaposlenja</h1>
+		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s"><?php the_field('title') ?></h1>
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
-			<h3>Zaposlenja</h3>
+			<h3><?php the_field('pretitle') ?></h3>
 		</div>
 	</div>
 </section><!--b-pageHeader-->
 
 <div class="b-breadCumbs s-shadow wow zoomInUp" data-wow-delay="0.5s">
 	<div class="container">
-		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="contacts.html" class="b-breadCumbs__page m-active">Zaposlenja</a>
+		<a href="home.html" class="b-breadCumbs__page">Početna</a><span class="fa fa-angle-right"></span><a href="contacts.html" class="b-breadCumbs__page m-active"><?php the_title() ?></a>
 	</div>
 </div><!--b-breadCumbs-->
 
