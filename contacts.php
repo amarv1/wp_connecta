@@ -51,19 +51,21 @@ get_header(); ?>
 			</div>
 			<div class="col-xs-6">
 				<div class="b-contacts__address">
-					<div class="b-contacts__address-hours">
-						<h2 class="s-titleDet wow zoomInUp" data-wow-delay="0.5s">Radno vrijeme</h2>
-						<div class="b-contacts__address-hours-main wow zoomInUp" data-wow-delay="0.5s">
-							<div class="row">
-								<?php while(have_rows('work_time', 'option')): the_row(); ?>
-									<div class="col-md-6 col-xs-12">
-										<h5><?php echo get_sub_field('department_name', 'option') ?></h5>
-										<p><?php echo get_sub_field('department_worktime', 'option') ?></p>
-									</div>
-								<?php endwhile; ?>
+					<?php if(have_rows('work_time', 'option')): ?>
+						<div class="b-contacts__address-hours">
+							<h2 class="s-titleDet wow zoomInUp" data-wow-delay="0.5s">Radno vrijeme</h2>
+							<div class="b-contacts__address-hours-main wow zoomInUp" data-wow-delay="0.5s">
+								<div class="row">
+									<?php while(have_rows('work_time', 'option')): the_row(); ?>
+										<div class="col-md-6 col-xs-12">
+											<h5><?php echo get_sub_field('department_name', 'option') ?></h5>
+											<p><?php echo get_sub_field('department_worktime', 'option') ?></p>
+										</div>
+									<?php endwhile; ?>
+								</div>
 							</div>
 						</div>
-					</div>
+					<?php endif; ?>
 					<div class="b-contacts__address-info">
 						<h2 class="s-titleDet wow zoomInUp" data-wow-delay="0.5s">Kontakti</h2>
 						<address class="b-contacts__address-info-main wow zoomInUp" data-wow-delay="0.5s">
