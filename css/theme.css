@@ -203,7 +203,7 @@ body{
     margin-left: 10px;
 }
 
-.s-form input[type='file']{
+.s-form input[type='file'],input[type="submit"]{
     position: absolute;
     opacity: 0;
     z-index:-100;

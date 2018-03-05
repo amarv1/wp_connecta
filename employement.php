@@ -46,8 +46,16 @@ get_header(); ?>
 							<span class="fa fa-caret-down"></span>
 						</div>
 						<textarea id="additional-info" name="additional-info" placeholder="DODATNI OPIS"></textarea>
-						<a href="#" class="btn m-btn m-infoBtn" style="margin-top: 25px;">BIOGRAFIJA<span class="fa fa-angle-right"></span></a>
-						<button type="submit" class="btn m-btn">POŠALJI<span class="fa fa-angle-right"></span></button>
+						<label class="b-submit__main-file-label btn m-btn m-infoBtn wow zoomInUp" data-wow-delay="0.3s" style="visibility: visible; margin-top: 25px; animation-delay: 0.3s; animation-name: zoomInUp;">
+							<input type="file" class="" name="img">
+							<span>UPLOAD BIOGRAFIJU</span>
+							<span class="fa fa-angle-right"></span>
+						</label>
+						<label class="b-submit__main-file-label btn m-btn m-infoBtn wow zoomInUp" data-wow-delay="0.3s" style="visibility: visible; margin-top: 25px; animation-delay: 0.3s; animation-name: zoomInUp;">
+							<input type="submit" class="" name="img">
+							<span>POŠALJI</span>
+							<span class="fa fa-angle-right"></span>
+						</label>
 					</form>
 				</div>
 			</div>
