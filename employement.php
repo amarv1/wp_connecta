@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 
-<section class="b-pageHeader">
+<section class="b-pageHeader" style="background: url(<?php the_field('background') ?>) center;">
 	<div class="container">
 		<h1 class=" wow zoomInLeft" data-wow-delay="0.5s"><?php the_field('title') ?></h1>
 		<div class="b-pageHeader__search wow zoomInRight" data-wow-delay="0.5s">
@@ -25,10 +25,9 @@ get_header(); ?>
 			<div class="col-xs-6">
 				<div class="b-contacts__form">
 					<header class="b-contacts__form-header s-lineDownLeft wow zoomInUp" data-wow-delay="0.5s">
-						<h2 class="s-titleDet">Zaposlenja</h2>
+						<h2 class="s-titleDet"><?php the_field('section_title') ?></h2>
 					</header>
-					<p class=" wow zoomInUp" data-wow-delay="0.5s">Connecta d.o.o. je jedinstvena kompanija na bosanskohercegovačkom tržištu, specijalizirana za full fleet management tj. upravljanje voznim parkom, operativni leasing i dugoročni najam vozila, kao i prodaju teretnog programa Ford Cargo. Ukoliko ste spremni raditi u dinamičnom i stimulativnom radnom okruženju, nudimo Vam mogućnost da budete dio uspješnog tima i sudjelujete u razvoju kompanije.
-Pošaljite nam svoj CV i Motivacijsko pismo putem E-maila, ili se možete prijaviti putem online formulara:</p>
+					<p class=" wow zoomInUp" data-wow-delay="0.5s"><?php the_field('text') ?></p>
 					<div id="success"></div>
 					<form id="contactForm" novalidate class="s-form wow zoomInUp" data-wow-delay="0.5s">
 						<input type="text" placeholder="IME I PREZIME" value="" name="user-name" id="user-name" />
