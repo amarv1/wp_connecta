@@ -55,14 +55,12 @@ get_header(); ?>
 						<h2 class="s-titleDet wow zoomInUp" data-wow-delay="0.5s">Radno vrijeme</h2>
 						<div class="b-contacts__address-hours-main wow zoomInUp" data-wow-delay="0.5s">
 							<div class="row">
-								<div class="col-md-6 col-xs-12">
-									<h5>Kancelarija</h5>
-									<p>Pon-Pet : 8:00 - 16:00 <br/>Vikend ne radimo</p>
-								</div>
-								<div class="col-md-6 col-xs-12">
-									<h5>Servis</h5>
-									<p>Pon-Sub : 8:00 - 17:00 <br/>Nedelju ne radimo</p>
-								</div>
+								<?php while(have_rows('work_time', 'option')): the_row(); ?>
+									<div class="col-md-6 col-xs-12">
+										<h5><?php echo get_sub_field('department_name', 'option') ?></h5>
+										<p><?php echo get_sub_field('department_worktime', 'option') ?></p>
+									</div>
+								<?php endwhile; ?>
 							</div>
 						</div>
 					</div>
