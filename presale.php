@@ -1,6 +1,6 @@
 <?php 
 /*
- Template Name: Mazda vozila
+ Template Name: Pretprodaja
 */
 get_header(); ?>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 							<a href="listingsTwo.html" class="m-list m-active"><span class="fa fa-list"></span></a>
 							<a href="listTable.html" class="m-table"><span class="fa fa-table"></span></a>
 						</div> -->
-						<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
+						<!--<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 							<span class="b-infoBar__select-one-title">Prikaži na stranici</span>
 							<select name="select1" class="m-select">
 								<option value="10" selected="">10 vozila</option>
@@ -52,7 +52,7 @@ get_header(); ?>
 								<option value="30">30 vozila</option>
 							</select>
 							<span class="fa fa-caret-down"></span>
-						</div>
+						</div>-->
 						<div class="b-infoBar__select-one wow zoomInUp" data-wow-delay="0.5s">
 							<span class="b-infoBar__select-one-title">Sortiraj</span>
 							<select name="select2" class="m-select">
@@ -82,7 +82,7 @@ get_header(); ?>
 								array(
 									'taxonomy' => 'car_sale_type',
 									'field'    => 'slug',
-									'terms'    => 'novo',
+									'terms'    => 'pretprodaja',
 									'operator' 		   => 'IN',
 								),
 							),
