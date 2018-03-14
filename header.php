@@ -9,8 +9,10 @@
 	<script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo(get_template_directory_uri().'/css/master.css'); ?>" media="all" />
 	<link rel="stylesheet" id="switcher-css" type="text/css" href="<?php echo(get_template_directory_uri().'/assets/switcher/css/switcher.css'); ?>" media="all" />
 	<link rel="alternate stylesheet" type="text/css" href="<?php echo(get_template_directory_uri().'/assets/switcher/css/color5.css'); ?>" title="color5" media="all" data-default-color="true" />
+	<link rel="stylesheet" type="text/css" href="<?php echo(get_template_directory_uri().'/css/jquery-ui.css'); ?>" media="all" />
 </head>
 <body class="m-index" data-scrolling-animations="true" data-equal-height=".b-auto__main-item">
 

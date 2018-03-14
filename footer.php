@@ -145,6 +145,7 @@
 <script src="<?php echo(get_template_directory_uri().'/js/jquery-ui.min.js') ?>"></script>
 <script src="<?php echo(get_template_directory_uri().'/js/bootstrap.min.js') ?>"></script>
 <script src="<?php echo(get_template_directory_uri().'/js/modernizr.custom.js') ?>"></script>
+<script src="<?php echo(get_template_directory_uri().'/js/jquery.validate.min.js') ?>"></script>
 
 <script src="<?php echo(get_template_directory_uri().'/assets/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js') ?>"></script>
 <script src="<?php echo(get_template_directory_uri().'/js/waypoints.min.js') ?>"></script>

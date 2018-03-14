@@ -29,7 +29,7 @@ get_header(); ?>
 					</header>
 					<p class=" wow zoomInUp" data-wow-delay="0.5s">Upišite svoje informacije i pitanja u formi ispod, i naše osoblje će Vas kontaktirati u najkraćem roku.</p>
 					<div id="success"></div>
-					<form id="contactForm" novalidate class="s-form wow zoomInUp" data-wow-delay="0.5s">
+					<form id="contactForm" validate class="s-form wow zoomInUp" data-wow-delay="0.5s">
 						<div class="s-relative">
 							<select name="user-topic" id="user-topic" class="m-select">
 								<option value="Not select">Izaberite uslugu</option>

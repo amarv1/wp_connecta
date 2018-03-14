@@ -303,3 +303,73 @@
 	Core.initialize();
 
 })();
+
+$(document).ready(function(){
+	$("#date").datepicker();
+	$("#date1").datepicker();
+	$("#contactForm2").validate({
+		rules: {
+			required: true,
+			email: true
+		},
+		messages: {
+			username: "Ime mora biti uneseno",
+			userlastname: "Prezime mora biti uneseno",
+			userphone: "Telefon mora biti unsen",
+			useremail:{
+				required: "Email mora biti unesen",
+				email: "Unesite ispravan email"
+			}
+		}
+	});
+
+	$("#klass").change(function(){
+		var klass = $("#klass");
+		var klassa = $("#group");
+		if(klass[0].value != 0){
+			$(".grupe").show();
+		}else{
+			$(".grupe").hide();
+		}
+		
+	})
+
+	$(".next").on("click", function(){
+		var i = 0;
+		var location = $("#location option:selected");
+		var location2 = $("#location2 option:selected");
+		var klass = $("#klass");
+		var klassa = $("#group");
+		console.log(klass[0].value)
+		var num1 = ".location-dng";
+		var num2 = ".location2-dng";
+		var num3 = ".klass-dng";
+		var num4 = ".grupa-dng";
+		var arr = [location, num1, location2, num2, klass, num3];
+		console.log(arr[4][0].value)
+		for(var i = 0; i < arr.length; i = i + 2){
+			if(arr[i][0].value == 0){
+				$(arr[i + 1]).show();
+			} else {
+				$(arr[i + 1]).hide();
+			}
+		}
+
+		if(arr[4][0].value != 0 && klassa[0].value == 0){
+			$(num4).show();
+		}else {
+			$(num4).hide()
+		}
+		if(arr[0][0].value != 0 && arr[2][0].value != 0 &&  arr[4][0].value != 0 && klassa[0].value != 0){
+			$(".first").hide();
+			$(".second").show();
+		}
+		
+	});
+
+	$(".pervious").on("click", function(){
+		$(".second").hide();
+		$(".first").show();
+	})
+
+});
